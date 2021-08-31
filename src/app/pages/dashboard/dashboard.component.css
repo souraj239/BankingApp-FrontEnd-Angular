@@ -1,0 +1,12 @@
+.blue{
+    background-color:   #3f51b5;
+}
+.footer-copyright{
+    color:white;
+    margin-bottom: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    background-color: #3f51b5;
+}

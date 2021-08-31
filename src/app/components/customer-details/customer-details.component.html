@@ -1,0 +1,53 @@
+<mat-card-header>Account Details</mat-card-header>
+<mat-card-content>
+  <div class="bootstrap-wrapper">
+    <div class="container text-center">
+      <img src="../../../assets/profile.png" alt="" class="profile-image responsive-img">
+      <h3>{{customerDetails.customerName}}</h3>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <table class="table">
+            <tr>
+              <td>User Name :</td>
+              <td>{{customerDetails.userName}}</td>
+            </tr>
+            <tr>
+              <td>Account Number :</td>
+              <td>{{customerDetails.accountNumber}}</td>
+            </tr>
+            <tr>
+              <td>IFSC Code :</td>
+              <td>{{customerDetails.ifsc}}</td>
+            </tr>
+            <tr>
+              <td>Home Branch :</td>
+              <td>{{customerDetails.homeBranch}}</td>
+            </tr>
+            <tr>
+              <td>Account Balance :</td>
+              <td> Rs. {{customerDetails.accountBalance}}</td>
+            </tr>
+            <tr>
+              <td>Account Type :</td>
+              <td>{{customerDetails.accountType}}</td>
+            </tr>
+            <tr>
+              <td>Debit Card Number :</td>
+              <td>{{customerDetails.cardNum}}</td>
+            </tr>
+            <tr>
+              <td>Phone Number :</td>
+              <td>{{customerDetails.phoneNo}}</td>
+            </tr>
+            <tr>
+              <td>Address :</td>
+              <td>{{customerDetails.address}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div> 
+  </div>
+</mat-card-content>

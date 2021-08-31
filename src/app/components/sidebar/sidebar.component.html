@@ -1,0 +1,38 @@
+<mat-card>
+    <div class="mb-300">
+      <mat-action-list>
+        <h1>Hi, {{customerName}}</h1>
+        <div mat-subheader>Menu</div>
+        <mat-divider></mat-divider>
+        <button accesskey="h" mat-list-item routerLink="/dashboard">
+          <mat-icon mat-list-icon>home</mat-icon> <span class="u">H</span>ome
+        </button>
+        <mat-divider></mat-divider>
+        <button accesskey="h" mat-list-item routerLink="/dashboard/content/customerdetails">
+          <mat-icon mat-list-icon>info</mat-icon> Account Details
+        </button>
+        <mat-divider></mat-divider>
+        <button  accesskey="e" mat-list-item routerLink="/dashboard/submitaudit">
+          <mat-icon mat-list-icon>sync_alt</mat-icon>Transfer Money
+        </button>
+        <mat-divider></mat-divider>
+        <button accesskey="h" mat-list-item routerLink="/dashboard/audithistory">
+          <mat-icon mat-list-icon>money</mat-icon>Cash Withdrawal
+        </button>
+        <mat-divider></mat-divider>
+        <button accesskey="h" mat-list-item routerLink="/dashboard/audithistory">
+            <mat-icon mat-list-icon>savings</mat-icon>Cash Deposit
+          </button>
+          <mat-divider></mat-divider>
+          <button accesskey="h" mat-list-item routerLink="/dashboard/audithistory">
+            <mat-icon mat-list-icon>receipt_long</mat-icon>Account Statement
+          </button>
+          <mat-divider></mat-divider>
+        <button accesskey="o" mat-list-item (click)="userLogout()">
+          <mat-icon mat-list-icon>logout</mat-icon>L<u>o</u>gout
+        </button>
+        <mat-divider></mat-divider>
+      </mat-action-list>
+    </div>
+  </mat-card>
+  
