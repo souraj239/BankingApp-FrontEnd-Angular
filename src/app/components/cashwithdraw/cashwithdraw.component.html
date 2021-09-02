@@ -1,1 +1,22 @@
-<p>cashwithdraw works!</p>
+<div class="bootstrap-wrapper">
+    <div class="container">
+      <div class="row mt-40 mt-30">
+        <div class="col-md-10 offset-md-1">
+            <div class="container mt-100 text-center">
+              <h1>Cash Withdrawal </h1>
+              <div class="container mt-40 mb-100 full-width text-center">
+                <mat-form-field appearance="fill" floatLabel="always">
+                    <mat-label>Amount</mat-label>
+                    <input matInput type="number" class="example-right-align" placeholder="0" value="0" [(ngModel)]="amountDTO.amount">
+                    <span matPrefix>₹&nbsp;</span>
+                    <span matSuffix>.00</span>
+                  </mat-form-field>
+                  <div class="container mt-40 mb-100 full-width text-center">
+                  <button accesskey="m" (click)="confirm()" class="button big-btn ml-40" mat-raised-button color="accent" >Withdraw A<u>m</u>ount</button>
+                  </div>
+               </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,41 +1,14 @@
-<div class="bootstrap-wrapper">
-    <div class="container-fluid">
-      <mat-card>
-        <div class="container">
-          <mat-list>
-            <div mat-subheader>Transactions:</div>
-            <mat-list-item *ngFor="let h of transactionList">
-              <div class="container-fluid">
-                  <mat-card>
-                      <mat-icon mat-list-icon>account_balance_wallet</mat-icon>
-                    <span>
-                      <h2>{{ h.transactionDate}}</h2>
-                    </span>
-                    <mat-card-header>
-                      <mat-card-title>{{ h.transactionType }}</mat-card-title>
-                    </mat-card-header>
-                    <table class="table">
-                      <tr>
-                        <td>
-                          <div mat-line>
-                            {{ h.description}}
-                          </div>
-                        </td>
-                        <td>
-                          <div mat-line>{{ h.amount }}</div>
-                        </td>
-                      </tr>
-                    </table>
-                   <!-- <div [ngClass]="{
-                      greenClass: h.projectExecutionStatus,
-                      redClass: !h.projectExecutionStatus
-                    }"><b>Remedial Action : {{ h.remedialActionDuration }}</b></div>-->
-                  </mat-card>
-                </div>
-              <mat-divider></mat-divider>
-            </mat-list-item>
-          </mat-list>
-        </div>
-      </mat-card>
-    </div>
-  </div>
+<div fxLayout='row' fxLayoutWrap class="cards">
+<mat-card class="card-container mt-10" *ngFor = "let t of transactionList">
+  <mat-card-header>
+   <!-- <div mat-card-avatar *ngIf="t.transactionType==='DEBIT'" class="example-header-debit"></div>-->
+    <div mat-card-avatar  class="example-header-credit"></div>
+    <mat-card-title>{{t.transactionDate.toString()}}</mat-card-title>
+    <mat-card-title>
+      <div *ngIf="t.transactionType==='DEBIT'" class="redClass"> - Rs. {{t.amount}}.00</div>
+      <div *ngIf="t.transactionType==='CREDIT'" class="greenClass"> + Rs. {{t.amount}}.00</div>
+    </mat-card-title>
+    <mat-card-subtitle>{{t.description}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+</div>

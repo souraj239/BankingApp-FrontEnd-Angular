@@ -1,7 +1,32 @@
 .greenClass{
     color:green;
+    position: absolute;
+right: 10px;
+top: 5px;
 }
 
 .redClass{
     color:red;
+    position: absolute;
+right: 10px;
+top: 5px;
 }
+
+.mt10{
+    margin-top: 10px;
+}
+
+.example-header-debit{
+    background-image: url(../../../assets/spending.png);
+    background-image: cover;
+
+}
+.example-header-credit{
+    background-image: url(src\assets\cashback.png);
+    background-size: cover;
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }

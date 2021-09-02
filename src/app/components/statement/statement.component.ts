@@ -14,6 +14,7 @@ export class StatementComponent implements OnInit {
 
   transactionList:Transactions[]=[];
   transactionType:Boolean;
+  displayedColumns: string[] = ['transactionDate', 'decription', 'transactionType', 'amount'];
 
   constructor(private transactionService:TransactionService,private login:LoginService, private router:Router) { }
 
@@ -25,6 +26,7 @@ export class StatementComponent implements OnInit {
     this.transactionService.getStatement().subscribe(
       (data:any)=>{
         this.transactionList = data.reverse();
+        console.log(this.transactionList);
       },(error)=>{
         console.error(error);
         alert("Session Expired")

@@ -1,1 +1,38 @@
-<p>money-transfer works!</p>
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row mt-40 mt-30">
+            <div class="col-md-10 offset-md-1">
+                <h3>Money Transfer : </h3>
+                <form class="mt-20" (ngSubmit)="confirm()">
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Recipient's Username</mat-label>
+                        <input  type="text" name="username" matInput placeholder="Enter the Reciever's Username" [(ngModel)]="transactionDTO.userName" required>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Recipient's Account Number</mat-label>
+                        <input  type="password" name="accountnumber" matInput placeholder="Enter the Account Number" required>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Confirm Recipient's Account Number</mat-label>
+                        <input  type="text" name="AccountNumber" matInput placeholder="Enter the Account Number again" required>
+                    </mat-form-field>
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Recipient's Account IFSC Code</mat-label>
+                        <input  type="text" name="ifsccode" matInput placeholder="Enter the IFSC Code" required>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Amount</mat-label>
+                        <input matInput type="number" name ="amount" value="0" class="example-right-align" placeholder="0" [(ngModel)]="transactionDTO.amount">
+                        <span matPrefix>₹&nbsp;</span>
+                        <span matSuffix>.00</span>
+                    </mat-form-field>
+                      <div class="container mt-40 full-width text-center">
+                        <button accesskey="s" type="submit" mat-raised-button color="primary" > <u>S</u>ubmit </button>
+                        <button accesskey="r" type="reset" class="ml-20" mat-raised-button color="accent" > <u>R</u>eset </button>
+                    </div>
+                    <div class="mb-60"></div>
+                </form>
+            </div>               
+        </div>
+    </div>
+</div>

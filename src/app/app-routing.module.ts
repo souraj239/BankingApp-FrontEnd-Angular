@@ -8,6 +8,9 @@ import { DashGaurdGuard } from './services/dash-gaurd.guard';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { ContentComponent } from './components/content/content.component';
 import { MoneyTransferComponent } from './components/money-transfer/money-transfer.component';
+import { StatementComponent } from './components/statement/statement.component';
+import { CashwithdrawComponent } from './components/cashwithdraw/cashwithdraw.component';
+import { CashdepositComponent } from './components/cashdeposit/cashdeposit.component';
 
 
 const routes: Routes = [
@@ -45,7 +48,23 @@ const routes: Routes = [
             component:MoneyTransferComponent,
             pathMatch:'full',
           },
+          {
+            path:'withdraw',
+            component:CashwithdrawComponent,
+            pathMatch:'full'
+          },
+          {
+            path:'deposit',
+            component:CashdepositComponent,
+            pathMatch:'full'
+          }
         ]
+      },
+      {
+        path:'statement',
+        component:StatementComponent,
+        pathMatch:'full'
+
       }
     ]
   }
