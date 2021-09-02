@@ -16,15 +16,16 @@ top: 5px;
     margin-top: 10px;
 }
 
-.example-header-debit{
-    background-image: url(../../../assets/spending.png);
-    background-image: cover;
-
-}
 .example-header-credit{
-    background-image: url(src\assets\cashback.png);
+    background-image: url(../../../assets/cashbackcolor.png);
     background-size: cover;
 }
+
+.example-header-debit{
+    background-image: url(../../../assets/spending.png);
+    background-size: cover;
+}
+
 .card-container {
     display: flex;
     justify-content: space-between;

@@ -1,8 +1,8 @@
 <div fxLayout='row' fxLayoutWrap class="cards">
 <mat-card class="card-container mt-10" *ngFor = "let t of transactionList">
   <mat-card-header>
-   <!-- <div mat-card-avatar *ngIf="t.transactionType==='DEBIT'" class="example-header-debit"></div>-->
-    <div mat-card-avatar  class="example-header-credit"></div>
+   <div mat-card-avatar *ngIf="t.transactionType==='DEBIT'" class="example-header-debit"></div>
+    <div mat-card-avatar  *ngIf="t.transactionType==='CREDIT'" class="example-header-credit"></div>
     <mat-card-title>{{t.transactionDate.toString()}}</mat-card-title>
     <mat-card-title>
       <div *ngIf="t.transactionType==='DEBIT'" class="redClass"> - Rs. {{t.amount}}.00</div>

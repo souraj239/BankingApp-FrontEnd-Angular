@@ -10,15 +10,15 @@
                     </mat-form-field>
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Recipient's Account Number</mat-label>
-                        <input  type="password" name="accountnumber" matInput placeholder="Enter the Account Number" required>
+                        <input  type="number"  pattern="^[0-9]{13,17}$" title="Enter Correct Account Number" name="accountnumber" matInput placeholder="Enter the Account Number" required>
                     </mat-form-field>
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Confirm Recipient's Account Number</mat-label>
-                        <input  type="text" name="AccountNumber" matInput placeholder="Enter the Account Number again" required>
+                        <input  type="number" pattern="^[0-9]{13,17}$" title="Enter Correct Account Number"  name="AccountNumber" matInput placeholder="Enter the Account Number again" required>
                     </mat-form-field>
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Recipient's Account IFSC Code</mat-label>
-                        <input  type="text" name="ifsccode" matInput placeholder="Enter the IFSC Code" required>
+                        <input pattern="^[A-Z]{4}[0-9]{7}$" title="Enter Correct IFSC Code"  type="text" name="ifsccode" matInput placeholder="Enter the IFSC Code" required>
                     </mat-form-field>
                     <mat-form-field appearance="outline" class="full-width">
                         <mat-label>Amount</mat-label>
